@@ -72,7 +72,7 @@ pipeline {
         stage('Deploy') {
             steps {
                 //sh 'curl --upload-file target/SpringMVCHibernateCRUD.war "http://tomcat:password@10.62.125.4:8083/manager/text/deploy?path=/curd&update=true"'
-                sh 'curl --upload-file target/SpringMVCHibernateCRUD.war "http://tomcat:password@34.93.238.186:8081/manager/text/deploy?path=/curd&update=true"'
+                sh 'curl --upload-file target/SpringMVCHibernateCRUD.war "http://tomcat:password@34.93.120.219:8081/manager/text/deploy?path=/curd&update=true"'
                 //withCredentials([usernamePassword(credentialsId: 'nexusadmin', passwordVariable: 'pass', usernameVariable: 'user')]) {
                 //    sh 'curl --upload-file target/hello-world-war-1.0.0-SNAPSHOT.war "http://${user}:${pass}@34.93.240.217:8082/manager/text/deploy?path=/hello&update=true"'
                 //}
@@ -148,7 +148,7 @@ pipeline {
         NEXUS_PROTOCOL = "http"
         // Where your Nexus is running
         //NEXUS_URL = "10.62.125.4:8084"
-        NEXUS_URL = "35.200.184.59:8081"
+        NEXUS_URL = "35.244.49.94:8081"
         // Repository where we will upload the artifact
         NEXUS_REPOSITORY = "maven-snapshots"
         // Jenkins credential id to authenticate to Nexus OSS
